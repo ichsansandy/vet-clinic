@@ -32,3 +32,16 @@ UPDATE animals SET owner_id = ( SELECT id FROM owners WHERE full_name = 'Jennife
 UPDATE animals SET owner_id = ( SELECT id FROM owners WHERE full_name = 'Bob') WHERE name IN ('Devimon', 'Plantmon');
 UPDATE animals SET owner_id = ( SELECT id FROM owners WHERE full_name = 'Melody Pond') WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
 UPDATE animals SET owner_id = ( SELECT id FROM owners WHERE full_name = 'Dean Winchester') WHERE name IN ('Angemon', 'Boarmon');
+
+INSERT INTO vets (name, age, date_of_graduation) VALUES
+('William Tatcher', 45, '2000-04-23'),
+('Maisy Smith', 26, '2019-01-17'),
+('Stephanie Mendez', 64, '1981-05-04'),
+('Jack Harkness', 38, '2008-06-08');
+
+INSERT INTO specializations (vet_id, species_id) SELECT v.id, s.id FROM vets v, species s WHERE v.name = 'William Tatcher' AND s.name = 'Pokemon';
+INSERT INTO specializations (vet_id, species_id) SELECT v.id, s.id FROM vets v, species s WHERE v.name = 'Stephanie Mendez' AND s.name IN ('Digimon', 'Pokemon');
+INSERT INTO specializations (vet_id, species_id) SELECT v.id, s.id FROM vets v, species s WHERE v.name = 'Jack Harkness' AND s.name = 'Digimon';
+
+INSERT INTO visits (vet_id, animal_id, visit_date) SELECT v.id, a.id, '2020-05-24' FROM vets v, animals a WHERE v.name = 'William Tatcher' AND a.name = 'Agumon';
+INSERT INTO visits (vet_id, animal_id, visit_date) SELECT v.id, a.id, '2020-07-22' FROM vets v, animals a WHERE v.name = 'Stephanie Mendez' AND a.name = 'Agumon';
