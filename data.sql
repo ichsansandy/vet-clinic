@@ -45,3 +45,24 @@ INSERT INTO specializations (vet_id, species_id) SELECT v.id, s.id FROM vets v, 
 
 INSERT INTO visits (vet_id, animal_id, visit_date) SELECT v.id, a.id, '2020-05-24' FROM vets v, animals a WHERE v.name = 'William Tatcher' AND a.name = 'Agumon';
 INSERT INTO visits (vet_id, animal_id, visit_date) SELECT v.id, a.id, '2020-07-22' FROM vets v, animals a WHERE v.name = 'Stephanie Mendez' AND a.name = 'Agumon';
+
+INSERT INTO visits (vet_id, animal_id, visit_date) SELECT v.id, a.id, '2021-02-02' FROM vets v, animals a WHERE v.name = 'Jack Harkness' AND a.name = 'Gabumon';
+INSERT INTO visits (vet_id, animal_id, visit_date) SELECT v.id, a.id, '2020-01-05' FROM vets v, animals a WHERE v.name = 'Maisy Smith' AND a.name = 'Pikachu';
+INSERT INTO visits (vet_id, animal_id, visit_date) SELECT v.id, a.id, '2020-03-08' FROM vets v, animals a WHERE v.name = 'Maisy Smith' AND a.name = 'Pikachu';
+INSERT INTO visits (vet_id, animal_id, visit_date) SELECT v.id, a.id, '2020-05-14' FROM vets v, animals a WHERE v.name = 'Maisy Smith' AND a.name = 'Pikachu';
+INSERT INTO visits (vet_id, animal_id, visit_date) SELECT v.id, a.id, '2020-05-14' FROM vets v, animals a WHERE v.name = 'Stephanie Mendez' AND a.name = 'Devimon';
+INSERT INTO visits (vet_id, animal_id, visit_date) SELECT v.id, a.id, '2020-05-14' FROM vets v, animals a WHERE v.name = 'Jack Harkness' AND a.name = 'Charmander';
+ visited  on May 4th, 2021.
+ visited  on Feb 24th, 2021.
+Plantmon visited Maisy Smith on Dec 21st, 2019.
+Plantmon visited William Tatcher on Aug 10th, 2020.
+Plantmon visited Maisy Smith on Apr 7th, 2021.
+Squirtle visited Stephanie Mendez on Sep 29th, 2019.
+Angemon visited Jack Harkness on Oct 3rd, 2020.
+Angemon visited Jack Harkness on Nov 4th, 2020.
+Boarmon visited Maisy Smith on Jan 24th, 2019.
+Boarmon visited Maisy Smith on May 15th, 2019.
+Boarmon visited Maisy Smith on Feb 27th, 2020.
+Boarmon visited Maisy Smith on Aug 3rd, 2020.
+Blossom visited Stephanie Mendez on May 24th, 2020.
+Blossom visited William Tatcher on Jan 11th, 2021.
